@@ -1,0 +1,30 @@
+.form-box {
+	background-color: rgba(248, 195, 195, 0.712);
+	margin: auto auto;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgb(224, 213, 213);
+	position: absolute;
+	top: 15vh;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 500px;
+	/* height: 520px; */
+	height: 50rem;
+}
+
+.MuiCardHeader-title{
+	font-size: 2rem!important;
+}
+
+.MuiCardHeader-subheader{
+	font-size: 1.5rem!important;
+}
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+	font-size: 1rem !important;
+}
+
+.css-1wc848c-MuiFormHelperText-root{
+	font-size: 1.2rem !important;
+	color: navy !important;
+}

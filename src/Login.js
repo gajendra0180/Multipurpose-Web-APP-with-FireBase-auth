@@ -1,5 +1,5 @@
 import { React, useRef, useEffect, useState } from 'react'
-
+import './Login.css'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import CardHeader from '@mui/material/CardHeader'
@@ -7,9 +7,12 @@ import Avatar from '@mui/material/Avatar'
 import IconButton from '@mui/material/IconButton'
 import { useAuth } from './Contexts/AuthContext'
 import { Alert } from 'react-bootstrap'
+import Navbar from "./Components/Navbar";
+import Form1 from "./Components/Form1";
+
+      
 import { Link, useHistory } from 'react-router-dom'
 const Login = () => {
-
     const [name, setName] = useState("")
     const [password, setPassword] = useState("")
     const { login } = useAuth()
@@ -41,8 +44,11 @@ const Login = () => {
 
     return (
         <>
+        <Navbar/>
+         <Form1/>
             {/* {currentUser && currentUser.email} */}
             {error && <Alert variant="danger">{error}</Alert>}
+            <div className="form-box">
             <form action="" onSubmit={handleSubmit} style={{
                 justifContent: "center",
                 display: "flex",
@@ -60,46 +66,52 @@ const Login = () => {
 
                         </IconButton>
                     }
+
                     title="Welcome To the Login Page"
                     subheader="Please Login to continue"
-
-                />
+                />  
+               
                 <br />
                 <br />
-                <TextField
+                <TextField 
                     id="email"
                     autoFocus
                     type="email"
                     label="Enter Your Email"
-                    variant="standard"
+                    variant="outlined"
                     required
-                    onChange={handleChangeName}
-                    style={{ width: "30%" }}
+                    onChange={handleChangeName} 
+                    // color="success"
+                    style={{ width: "50%" }}
+                    size="medium"
                 />
                 <br />
+
                 <TextField
                     type="password"
                     style={{ width: "30%" }}
                     id="password"
                     label="Enter Your Password"
                     onChange={handleChangePassword}
+                    size="large"
                     value={password}
-                    variant="standard"
+                    variant="outlined"
+                    style={{ width: "50%"}}
                     helperText="Password must be of atleat 6 length"
                     required
                 />
                 <br />
                 <br />
                 <Button disabled={loading} type="submit" color="secondary" variant="contained">Login</Button>
-                <div className="w-100 text-center mt-3">
+                <div className="w-100 text-center fs-4 mt-4">
                     <Link to="/forgotPassword">Forgot Password?</Link>
                 </div>
-                <div>
+                <div className="createAccount mt-4">
                     Create an account?<Link to="/signup">Sign Up</Link>
                 </div>
 
             </form>
-
+            </div>
         </>
     )
 }

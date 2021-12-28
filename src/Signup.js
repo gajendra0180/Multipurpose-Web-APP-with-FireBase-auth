@@ -8,6 +8,11 @@ import IconButton from '@mui/material/IconButton'
 import { useAuth } from './Contexts/AuthContext'
 import { Alert } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom'
+import Navbar from "./Components/Navbar";
+import Form1 from "./Components/Form1";
+      
+
+import './Login.css'
 
 
 const Signup = () => {
@@ -52,8 +57,11 @@ const Signup = () => {
 
     return (
         <>
+        <Navbar/>
+        <Form1/>
             {/* {currentUser && currentUser.email} */}
             {error && <Alert variant="danger">{error}</Alert>}
+            <div className="form-box">
             <form action="" onSubmit={handleSubmit} style={{
                 justifContent: "center",
                 display: "flex",
@@ -76,16 +84,16 @@ const Signup = () => {
 
                 />
                 <br />
-                <br />
                 <TextField
                     id="email"
                     autoFocus
                     type="email"
                     label="Enter Your Email"
-                    variant="standard"
+                    variant="outlined"
                     required
                     onChange={handleChangeName}
-                    style={{ width: "30%" }}
+                    style={{ width: "50%" }}
+                    size="medium"
                 />
                 <br />
                 <TextField
@@ -95,9 +103,13 @@ const Signup = () => {
                     label="Enter Your Password"
                     onChange={handleChangePassword}
                     value={password}
-                    variant="standard"
+                    variant="outlined"
                     helperText="Password must be of atleat 6 length"
                     required
+                    style={{ width: "50%" }}
+                    variant="outlined"
+                    size="medium"
+
                 />
                 <br />
                 <TextField
@@ -107,18 +119,19 @@ const Signup = () => {
                     label="Confirm Your Password"
                     onChange={handleChangeConfirmPassword}
                     value={confirmPassword}
-                    variant="standard"
+                    variant="outlined"
                     helperText="Password must be same as you typed above"
                     required
+                    style={{ width: "50%" }}
+                    size="medium"
                 />
                 <br />
-                <br />
                 <Button disabled={loading} type="submit" color="secondary" variant="contained">Submit</Button>
-                <div>
+                <div className="fs-3 mt-4">
                     Already Have an account?<Link to="/login">Login</Link>
                 </div>
             </form>
-
+</div>
         </>
     )
 }

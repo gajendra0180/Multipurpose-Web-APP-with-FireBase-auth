@@ -61,7 +61,6 @@ const ForgotPassword = () => {
                         }
                         title="Welcome To the Password Reset Page"
                         subheader="Please Enter Email to continue"
-
                     />
                     <br />
                     <br />
