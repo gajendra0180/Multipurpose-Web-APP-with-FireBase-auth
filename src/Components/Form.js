@@ -9,6 +9,8 @@ const LOCAL_STORAGE_KEY = 'USERS_APP'
 
 const Form = () => {
 
+  console.log("hey the api key is"+process.env.REACT_APP_API_KEY)
+
 // getting current user from local host
   var { currentUser } = useAuth()
   var users = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
@@ -64,6 +66,7 @@ const Form = () => {
         key: "2073b628f8787fbac49a0bc9f63f2f002e956eca572e1d8b807a3e2338fdd0dc/stage",
         onCommand: ({ command }) => {
           console.log(command);
+          // console.log("akslakkkkkkkkkkkkkkkkkkkkkkkkssssssssssssssssssssssssssssssssssssssssssssss")
           getData(command);
         },
       })
@@ -119,7 +122,6 @@ const Form = () => {
   function getData(data) {
 
     var cityName;
-
     if (location.current.value != "") cityName = location.current.value;
     else cityName = data;
 
@@ -162,14 +164,18 @@ const Form = () => {
       });
   }
 
+  function handleSubmitForm(e)
+  { e.preventDefault();
+  }
+
 // UI rendering done here
   return (
     <>
       <section className="section_1">
-        <div className="location_form">
+        <form className="location_form" onSubmit={handleSubmitForm}>
           <input
             type="text"
-            required
+            // required
             ref={location}
             autoFocus
             autoComplete="off"
@@ -180,7 +186,7 @@ const Form = () => {
           <button className="location_form_submit" onClick={getData}>
             Submit
           </button>
-        </div>
+        </form>
         <div className="background_image"></div>
         <div className="append_here_before">Here Goes your Pinned Cards Mr.{currentUser.email} </div>
         <div style={{ marginTop: "2vh", display: "flex", flexWrap: "wrap" }}>
