@@ -60,7 +60,8 @@ const Signup = () => {
         <Navbar/>
         <Form1/>
             {/* {currentUser && currentUser.email} */}
-            {error && <Alert variant="danger">{error}</Alert>}
+
+         
             <div className="form-box">
             <form action="" onSubmit={handleSubmit} style={{
                 justifContent: "center",
@@ -84,6 +85,9 @@ const Signup = () => {
 
                 />
                 <br />
+                   <div className="FailedToLogin">
+             {error && <Alert variant="danger">{error}</Alert>}
+            </div>
                 <TextField
                     id="email"
                     autoFocus

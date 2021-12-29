@@ -13,10 +13,11 @@
 	right: 0;
 	width: 50vw;
 	/* height: 520px; */
-	height: 45rem;
+	height: 48rem;
 }
 .FailedToLogin{
 	/*width:25vw;*/
+	/*display:none;*/
 	width:auto;
 	z-index:10;
 	margin: auto auto;
