@@ -35,25 +35,29 @@ const Navbar = (props) => {
             &nbsp;&nbsp;<span>Tenki</span>
           </p>
         </div>
-        <div className="nav_action_buttons">
-         
 
+    <div className="top_nav_bar_buttons">
+              <div className="nav_action_buttons">
 {
   props.signedIn?<>
-          <button id="change_it">Welcome &nbsp;&nbsp;{user}</button>
-          <button><a style={{ color: "white" }} href="#">Tenki</a></button> 
-        <button><a style={{ color: "white" }} onClick={handleLogout} href="/login">Logout</a></button></>
+          <button   id="change_it">Welcome &nbsp;&nbsp;{user}</button>
+          <button><a   style={{ color: "white" }} href="#">Tenki</a></button> 
+        {/* <button ><a style={{ color: "white" }}  onClick={handleLogout}  href="/login">Logout</a></button> */}
+        </>
   :
   <>
             <button id="change_it">Home</button>
-          <button><a style={{ color: "white" }} href="#">Tenki</a></button> 
-   <button><a style={{ color: "white" }} href="login">Login</a></button>
-          <button><a style={{ color: "white" }} href="signup">SignUp</a></button>
+          <button><a   style={{ color: "white" }} href="#">Tenki</a></button> 
+   <button><a   style={{ color: "white" }} href="login">Login</a></button>
+          <button><a   style={{ color: "white" }} href="signup">SignUp</a></button>
           </>
   }
         
         </div>
-      </div>
+        {props.signedIn?  <a className="Logout" style={{ color: "white" }}  onClick={handleLogout}  href="/login">Logout</a>:<></>}
+     
+    </div>
+ </div>
     </>
   );
 };

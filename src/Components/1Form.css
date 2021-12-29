@@ -86,23 +86,14 @@
     .location_form {
       margin-top: 30vw;
     }
-    .nav_action_buttons {
-      margin-top: 2vh;
-    }
   }
   @media (max-width: 500px) {
     .location_form {
       margin-top: 45vw;
     }
-    .nav_action_buttons {
-      margin-top: 2vh;
+    .nav_action_buttons{
+      display:none;
     }
   }
   
-  @media (max-width: 400px) {
-    .nav_action_buttons {
-      /* margin-top: 2vh; */
-      display: none;
-    }
-  }
   

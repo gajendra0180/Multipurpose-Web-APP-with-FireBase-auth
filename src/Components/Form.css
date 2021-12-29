@@ -81,9 +81,6 @@ input[type="text"] {
   .location_form {
     margin-top: 30vw;
   }
-  .nav_action_buttons {
-    margin-top: 2vh;
-  }
     .append_here_before {
   font-size:4vw;
     margin-top:12vh;
@@ -93,17 +90,10 @@ input[type="text"] {
   .location_form {
     margin-top: 45vw;
   }
-  .nav_action_buttons {
-    margin-top: 2vh;
-  }
 
 }
 
 @media (max-width: 400px) {
-  .nav_action_buttons {
-    /* margin-top: 2vh; */
-    display: none;
-  }
       .append_here_before {
   font-size:5vw;
     margin-top:12vh;
