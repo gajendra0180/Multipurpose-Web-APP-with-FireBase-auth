@@ -12,11 +12,13 @@ const Card = (props) => {
     color: "white",
     position: "relative",
     zIndex: "100",
-    marginRight: "2vw",
+    marginRight: "auto",
     marginTop:"2vh",
+    marginLeft:"auto",
     cursor: "pointer",
     fontSize: "2em",
     borderRadius: "20px",
+    border:"none",
     backgroundImage: `url(${bgImg})`,
     height: "400px",
     width: "300px",
@@ -33,7 +35,7 @@ const Card = (props) => {
       <div style={style1} className="card">
 
       {props.temperature_humidity === "" ? (
-          <h1 style={{color:"black",fontStyle:"italic",fontFamily:"fantasy"}}>{props.city}</h1>
+          <h1 style={{color:"white",fontStyle:"italic",fontFamily:"fantasy"}}>{props.city}</h1>
         ) : (
           <h1>Location: {props.city}</h1>
         )}

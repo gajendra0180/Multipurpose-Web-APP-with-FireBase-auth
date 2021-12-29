@@ -33,8 +33,16 @@
   }
   .logo > p > span {
     font-size: 0.7em;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     letter-spacing: 0.2em;
+    top:-0rem;
+    position: relative;
+  }
+  .logo-top-heading{
+    font-weight: bolder;
+    font-size: 1.5rem !important;
+    left:1vw;
+    display:none;
   }
   .nav_action_buttons {
     /* display: none; */
@@ -79,6 +87,14 @@
   .nav_action_buttons {
     margin-top: 2vh;
   }
+  .logo-top-heading{
+    display: none;
+  }
+    .logo > p > span {
+    margin: auto auto;
+    position: relative;
+    top:-1rem;
+    }
 }
 @media (max-width: 500px) {
   #location_form {
@@ -87,14 +103,22 @@
   .nav_action_buttons {
     margin-top: 2vh;
   }
-
+  
+  .logo > p > span {
+    margin: auto auto;
+    position: relative;
+    top:-1rem;
+    left:-10vw;
+  }
+  .logo>img{
+    position: relative;
+    left:-10vw;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 807px) {
   .nav_action_buttons {
     /* margin-top: 2vh; */
     display: none;
-  }
-
-
+  } 
 }
