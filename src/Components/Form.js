@@ -9,26 +9,49 @@ const LOCAL_STORAGE_KEY = 'USERS_APP'
 
 const Form = () => {
 
+// getting current user from local host
   var { currentUser } = useAuth()
   var users = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
     if (currentUser == undefined) {
       currentUser = users
     }
 
+// setting up alan instance
   const [alanInstance, setAlanInstance] = useState();
+
+// alan instance speaks when locaton found
+
   const speak = useCallback(() => {
+     alanInstance.activate()  
     alanInstance.playText(
       "Sorry But We are not able to find any such place in our database.Please Try Again"
     );
   }, [alanInstance]);
 
-
-  // Event listener for making the alan speak when some errors encountered
   useEffect(() => {
+    window.addEventListener("error_occurred", speak);
     return () => {
       window.removeEventListener("error_occurred", speak);
     };
   }, [speak]);
+
+// alan instance speaks when locaton not found
+
+
+  const speakLocation = useCallback(() => {
+     alanInstance.activate()  
+    alanInstance.playText(
+      `The weather report has appeared as a card on the webpage.Thanks For Using Me!`
+    );
+  }, [alanInstance]);
+
+
+    useEffect(() => {
+    window.addEventListener("Location_Found", speakLocation);
+    return () => {
+      window.removeEventListener("Location_Found", speakLocation);
+    };
+  }, [speakLocation]);
 
 
 // Basic Alan AI Setup
@@ -89,10 +112,12 @@ const Form = () => {
         return totalCardsPinned;
       });
     }
+
   }
 
   // This function will fetch the data from the open weather server and unsplash server through APIs
   function getData(data) {
+
     var cityName;
 
     if (location.current.value != "") cityName = location.current.value;
@@ -101,6 +126,7 @@ const Form = () => {
     location.current.value = null;
 
     console.log("Hey The city" + cityName);
+
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=52fbfd16084cb849b4bab407c67677ea&units=metric`;
 
@@ -119,7 +145,7 @@ const Form = () => {
           `https://source.unsplash.com/1600x900/?${responseJson.weather[0].description}`
         ).then((response) => {
           console.log(response.url);
-
+                  window.dispatchEvent(new CustomEvent("Location_Found"));      
           update(
             cityName,
             responseJson.main.temp,
@@ -129,13 +155,14 @@ const Form = () => {
           );
         });
       })
-      .catch((error) => {
+    .catch((error) => {
         console.log("Error occured");
         window.dispatchEvent(new CustomEvent("error_occurred"));
         update("", "", "", "", "");
       });
   }
 
+// UI rendering done here
   return (
     <>
       <section className="section_1">
