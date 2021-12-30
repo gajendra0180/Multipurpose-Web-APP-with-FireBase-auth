@@ -9,6 +9,8 @@ const LOCAL_STORAGE_KEY = 'USERS_APP'
 
 const Form = () => {
 
+  console.log("hey the api key is"+process.env.REACT_APP_API_KEY)
+
 // getting current user from local host
   var { currentUser } = useAuth()
   var users = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
@@ -54,21 +56,20 @@ const Form = () => {
   }, [speakLocation]);
 
 
-
 // Basic Alan AI Setup
   useEffect(() => {
     if (alanInstance != null) return;
-       setAlanInstance(
+    setAlanInstance(
       alanBtn({
         bottom: "2vh",
         right: "1vw",
-        key: process.env.REACT_APP_API_KEY_ALAN_AI,
+        key: "2073b628f8787fbac49a0bc9f63f2f002e956eca572e1d8b807a3e2338fdd0dc/stage",
         onCommand: ({ command }) => {
           console.log(command);
+          // console.log("akslakkkkkkkkkkkkkkkkkkkkkkkkssssssssssssssssssssssssssssssssssssssssssssss")
           getData(command);
         },
       })
-
     );
   }, []);
 
@@ -129,7 +130,7 @@ const Form = () => {
     console.log("Hey The city" + cityName);
 
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.REACT_APP_API_KEY_OPEN_WEATHER}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=52fbfd16084cb849b4bab407c67677ea&units=metric`;
 
     fetch(url)
       .then((response) => {
@@ -158,7 +159,7 @@ const Form = () => {
       })
     .catch((error) => {
         console.log("Error occured");
-    window.dispatchEvent(new CustomEvent("error_occurred"));
+        window.dispatchEvent(new CustomEvent("error_occurred"));
         update("", "", "", "", "");
       });
   }

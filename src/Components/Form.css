@@ -1,8 +1,8 @@
 
 .background_image {
   height: 100vh ;
-  /*background-image: url(https://source.unsplash.com/1600x900/?Kyoto); */
-   background-image: url(./pic.jpeg) ; 
+  background-image: url(https://source.unsplash.com/1600x900/?Kyoto); 
+  /* background-image: url(./pic.jpeg) ; */
   width: 100% ;
   position: absolute ;
   left: 0 ;
