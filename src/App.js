@@ -10,10 +10,9 @@ import UpdateProfile from "./UpdateProfile";
 
 function App() {
 
+
   return (
     <>
-      
-     
       <Router>
         <AuthProvider>
           <Switch>
