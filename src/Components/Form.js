@@ -172,6 +172,7 @@ const Form = () => {
   return (
     <>
       <section className="section_1">
+     
         <form className="location_form" onSubmit={handleSubmitForm}>
           <input
             type="text"

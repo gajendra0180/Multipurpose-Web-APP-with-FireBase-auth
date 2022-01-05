@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+
 const LOCAL_STORAGE_KEY = "USERS_APP";
 
 const Navbar = (props) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  }, []);
+
   let user = "";
   if (props.name) {
     user = props.name;
@@ -29,7 +40,25 @@ const Navbar = (props) => {
           <p>
             <span className="logo-top-heading">{user}&nbsp;</span>
             <br />
-            &nbsp;&nbsp;<span>Tenki</span>
+            {windowWidth > 900 ? (
+              <>
+                {" "}
+                &nbsp;&nbsp;<span>Tenki</span>
+              </>
+            ) : (
+              <>
+                {props.signedIn ? (
+                  <></>
+                ) : (
+                  <>
+                    {" "}
+                    <span>
+                      <strong>Tenki</strong>
+                    </span>
+                  </>
+                )}
+              </>
+            )}
           </p>
         </div>
 
@@ -79,14 +108,38 @@ const Navbar = (props) => {
             )}
           </div>
           {props.signedIn ? (
-            <a
-              className="Logout"
-              style={{ color: "white" }}
-              onClick={handleLogout}
-              href="/login"
-            >
-              Logout
-            </a>
+            <span className="d-flex flex-row">
+              {windowWidth <= 900 ? (
+                <>
+                  <button className="Logout Toggle_Button">
+                    {props.Dashboard ? (
+                      <>
+                        <a style={{ color: "white" }} href="/drive">
+                          Drive
+                        </a>
+                      </>
+                    ) : (
+                      <>
+                        {" "}
+                        <a style={{ color: "white" }} href="/dashboard">
+                          Dashboard
+                        </a>
+                      </>
+                    )}
+                  </button>
+                </>
+              ) : (
+                <></>
+              )}
+              <a
+                className="Logout"
+                style={{ color: "white" }}
+                onClick={handleLogout}
+                href="/login"
+              >
+                Logout
+              </a>
+            </span>
           ) : (
             <></>
           )}

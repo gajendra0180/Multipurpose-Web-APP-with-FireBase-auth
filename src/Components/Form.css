@@ -98,7 +98,7 @@ input[type="text"] {
 
 @media (max-width: 400px) {
   .append_here_before {
-    font-size: 5vw;
+    font-size: 4vw;
     margin-top: 12vh;
   }
 }
