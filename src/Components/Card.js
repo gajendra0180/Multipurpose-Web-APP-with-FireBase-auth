@@ -20,6 +20,7 @@ const Card = (props) => {
     borderRadius: "20px",
     border:"none",
     backgroundImage: `url(${bgImg})`,
+    bacgkroundAttachment:"fixed",
     height: "400px",
     width: "300px",
     display: "flex",

@@ -1,0 +1,5 @@
+.btn-success:hover {
+  transition: 0.8s;
+  transform: scale(1.75) !important;
+  transition-timing-function: ease-in-out;
+}

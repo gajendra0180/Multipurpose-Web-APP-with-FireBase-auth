@@ -1,12 +1,16 @@
-
 .background_image {
-  height: 100vh ;
-  background-image: url(https://source.unsplash.com/1600x900/?japan); 
+  background-image: url(https://source.unsplash.com/1600x900/?japan);
   /* background-image: url(./pic.jpeg) ; */
-  width: 100% ;
-  position: absolute ;
-  left: 0 ;
-  top: -40vh ;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  left: 0;
+  height: auto;
+  min-height: 100vh;
+  /* min-height: 300vh; */
+  /* height: 200vh; */
+  top: -40vh;
 }
 .location_form {
   z-index: 1;
@@ -65,7 +69,7 @@ input[type="text"] {
   flex-direction: row;
   flex-wrap: wrap;
   position: relative;
-   margin-top: 15vh; 
+  margin-top: 15vh;
   z-index: 2;
   width: auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -81,21 +85,20 @@ input[type="text"] {
   .location_form {
     margin-top: 30vw;
   }
-    .append_here_before {
-  font-size:4vw;
-    margin-top:12vh;
+  .append_here_before {
+    font-size: 4vw;
+    margin-top: 12vh;
   }
 }
 @media (max-width: 500px) {
   .location_form {
     margin-top: 45vw;
   }
-
 }
 
 @media (max-width: 400px) {
-      .append_here_before {
-  font-size:5vw;
-    margin-top:12vh;
+  .append_here_before {
+    font-size: 5vw;
+    margin-top: 12vh;
   }
 }

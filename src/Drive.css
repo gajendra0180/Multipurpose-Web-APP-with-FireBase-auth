@@ -1,0 +1,31 @@
+.background_image1 {
+  background-image: url(https://source.unsplash.com/1600x900/?japan);
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+hr {
+  height: 4px !important;
+  background-color: white !important;
+  border: none !important;
+  margin-left: 2vw !important;
+  margin-right: 2vw !important;
+}
+.child_folders {
+  margin-top: 15vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.child_files {
+  margin-top: 2vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
