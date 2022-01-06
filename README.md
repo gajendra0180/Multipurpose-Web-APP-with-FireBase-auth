@@ -1,7 +1,7 @@
 # Getting Started with the project
 
 This project is created by Gajendra Pal.
-This is  a weather web app in react.It uses open weather API to fetch current data and display them in the form of cards on the webpage.I also integrated voice commands in it with the help of "Alan AI". Alan is a complete Voice AI Platform that lets you embed a contextual voice assistant into your existing application UI.
+This is  a multipurpose web app in react.It uses open weather API to fetch current data and display them in the form of cards on the webpage.I also integrated voice commands in it with the help of "Alan AI". Alan is a complete Voice AI Platform that lets you embed a contextual voice assistant into your existing application UI.
 
 
 
