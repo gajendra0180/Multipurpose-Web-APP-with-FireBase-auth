@@ -1,7 +1,7 @@
 # Getting Started with the project
 
 This project is created by Gajendra Pal.
-This is  a multipurpose web app in react.It uses open weather API to fetch current data and display them in the form of cards on the webpage.I also integrated voice commands in it with the help of "Alan AI". Alan is a complete Voice AI Platform that lets you embed a contextual voice assistant into your existing application UI.
+This is  a weather web app in react.It uses open weather API to fetch current data and display them in the form of cards on the webpage.I also integrated voice commands in it with the help of "Alan AI". Alan is a complete Voice AI Platform that lets you embed a contextual voice assistant into your existing application UI.
 
 
 
@@ -25,6 +25,4 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ## Working with the project
-After the webpage loads,Sign up if you haven't yet otherwise sign in to your account and the dashboard loads up.You can type in the  search box to search the city,state or country name to find the respective weather report.You can also use the Alan AI(in the form of a voice button at the bottom right of the page) to give commands and search the respective location. To use the voice features, try out : "Hey Alan, what's the temperature in {location}" or "Hey Alan, what's the weather report of {location} right now". You can manipulate the commands and Alan would recognise them because it uses AI technology to interpret what you meant to say and get the corresponding intent.
-Now from the dashboard you can go to your drive i.e. your storage space and can upload files and folders to the drive and they will be saved to your account on the application.
-Enjoy!
+After the webpage loads,You can type in the  search box to search the city,state or country name to find the respective weather report.You can also use the Alan AI(in the form of a voice button at the bottom right of the page) to give commands and search the respective location. To use the voice features, try out : "Hey Alan, what's the temperature in {location}" or "Hey Alan, what's the weather report of {location} right now". You can manipulate the commands and Alan would recognise them because it uses AI technology to interpret what you meant to say and get the corresponding intent.
