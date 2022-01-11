@@ -190,7 +190,7 @@ const Form = () => {
         </form>
         <div className="background_image"></div>
         <div className="append_here_before">Here Goes your Pinned Cards Mr.{currentUser.email} </div>
-        <div style={{ marginTop: "2vh", display: "flex", flexWrap: "wrap" }}>
+        <div style={{ marginTop: "2vh", display: "flex", flexWrap: "wrap" ,justifyContent :"center" }}>
           {weatherCards.map((e) => {
             return (
               <Card

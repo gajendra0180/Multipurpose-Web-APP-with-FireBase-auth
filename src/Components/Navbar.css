@@ -11,10 +11,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-color: rgba(136, 99, 99, 0.87);
+  background-color: rgba(216, 80, 80, 0.877);
   padding: 15rem;
   z-index: 1;
   opacity: 0.85;
+  backdrop-filter: blur(20px);
+  /* color: black !important; */
 }
 
 .logo {
@@ -64,10 +66,10 @@
   flex-wrap: wrap;
   flex-direction: row;
 }
-.nav_action_buttons > button {
+.navbtn, .nav_action_buttons button{
   margin-right: 2em;
   /*padding: 0.8rem;*/
-  border-radius: 5%;
+  /* border-radius: 5%; */
   font-weight: bolder;
   border: none;
   font-size: 0.8em;
@@ -78,21 +80,44 @@
   cursor: pointer;
   color: white;
   transition-duration: 0.4s;
-  border: 1px solid rgba(255, 255, 255, 0);
-  border-radius: 50px;
+  /* border: 1px solid rgba(255, 255, 255, 0); */
+  background-image: linear-gradient(-55deg ,rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255) 50%);
+  background-size: 215% 110%;
+  background-position: right;
+  /* border-radius: 50px; */
   transition-timing-function: ease-in-out;
+  /* padding: 0.4em; */
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
-.nav_action_buttons > button:hover {
+.navbtn:hover {
   /* transform: scale(1.02); */
-  color: whitesmoke;
-  border: 1px solid rgba(12, 0, 0, 0.26);
-  border-radius: 0px;
+  color: rgba(216, 80, 80, 0.877) !important;
+  background-image: linear-gradient(-55deg ,rgba(255, 255, 255, 0) 50%, white 50%);
+  background-position: left !important;
+  /* border: 1px solid rgba(12, 0, 0, 0.26); */
+  /* border-radius: 0px;
   border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px; */
   /* backdrop-filter: blur(500px); */
-  background-color: #00000028;
+  /* background-color: #00000028; */
 }
-
+.nav_action_buttons >button:hover{
+  /* background-image: linear-gradient(-55deg ,rgba(255, 255, 255, 0) 50%, white 50%); */
+  color: rgba(216, 80, 80, 0.877) !important;
+  background-position: left !important;
+}
+.nav_action_buttons>button:hover>a{
+  
+   color: rgba(216, 80, 80, 0.877) !important;
+}
+.nav_action_buttons a
+{
+  transition: color 0.5s ease-in-out !important;
+}
 /*Media Queries*/
 
 @media (max-width: 900px) {

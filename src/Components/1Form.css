@@ -25,6 +25,7 @@ input[type="text"] {
   font-size: large;
   opacity: 0.9;
   outline: none;
+  text-align: center;
 }
 ::placeholder {
   color: white;
@@ -62,9 +63,9 @@ input[type="text"] {
   margin-top: 2vh;
 }
 .append_here_before {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
   position: relative;
   margin-top: 25vh;
   z-index: 2;
@@ -76,7 +77,11 @@ input[type="text"] {
   letter-spacing: 0.4em;
   font-size: 3.5em;
   transition: 0.8s;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
+  text-align: center !important;
+  margin: auto;
+  /* border: 2px solid red; */
+  /* margin: auto; */
 }
 .createAccount {
   font-size: 1.6rem;
