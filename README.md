@@ -1,7 +1,6 @@
 # Getting Started with the project
-
-This project is created by Gajendra Pal.
-This is  a multipurpose web app in react.It uses open weather API to fetch current data and display them in the form of cards on the webpage.I also integrated voice commands in it with the help of "Alan AI". Alan is a complete Voice AI Platform that lets you embed a contextual voice assistant into your existing application UI.We have also worked upon providing Google Drive like facility for our users so that they can store their data and access it from the same place.
+This is a Full Stack multipurpose Web Application with basic features like authentication,login-signup,voice commands integration using "Alan AI" , live weather report , Google drive storage like facility using FireBase.
+It uses open weather API to fetch current data and display them in the form of cards on the webpage.I also integrated voice commands in it with the help of "Alan AI". Alan is a complete Voice AI Platform that lets you embed a contextual voice assistant into your existing application UI.We have also worked upon providing Google Drive like facility for our users so that they can store their data and access it from the same place.
 
 
 ## Setting up the project
